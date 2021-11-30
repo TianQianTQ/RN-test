@@ -26,7 +26,12 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const Section = ({children, title}): Node => {
+interface SectionProps {
+  children: any;
+  title: String;
+}
+
+const Section = ({children, title}: SectionProps): Node => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
